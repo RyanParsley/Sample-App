@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.1'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'
-
+gem 'heroku'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -16,6 +16,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'factory_girl_rails', '1.4.0'
 end
 
 # Gems used only for assets and not required
