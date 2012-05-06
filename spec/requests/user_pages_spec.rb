@@ -32,6 +32,7 @@ describe "User pages" do
     end
 
     describe "with valid information" do
+      let(:user) { FactoryGirl.create(:user) }
       before do
         fill_in "Name",         with: "Example User"
         fill_in "Email",        with: "user@example.com"
