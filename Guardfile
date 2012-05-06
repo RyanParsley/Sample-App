@@ -24,9 +24,11 @@ guard 'rspec', :version => 2, :all_after_pass => false, :cli => '--drb' do
      (m[1][/_pages/] ? "spec/requests/#{m[1]}_spec.rb" : 
                        "spec/requests/#{m[1].singularize}_pages_spec.rb")]
   end
+
   watch(%r{^app/views/(.+)/}) do |m|
     "spec/requests/#{m[1].singularize}_pages_spec.rb"
   end
+
   # Capybara request specs
   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
 end
