@@ -7,18 +7,23 @@ gem 'heroku'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3', '1.3.5'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'annotate', '~> 2.4.1.beta'
+  gem 'sqlite3', '1.3.5'
+
 end
 
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails', '1.4.0'
-end
+  gem 'sqlite3', '1.3.5'
 
+end
+group :production do
+  gem 'pg', '0.12.2'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
