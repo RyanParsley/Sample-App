@@ -7,8 +7,7 @@ gem 'heroku'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
+gem 'sqlite3', '1.3.5'
 group :development, :test do
   gem 'rspec-rails'
   gem 'annotate', '~> 2.4.1.beta'
