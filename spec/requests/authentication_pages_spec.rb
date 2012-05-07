@@ -85,6 +85,18 @@ describe "Authentication" do
           click_button "Sign in"
         end
       end
+
+      describe "submitting to the create action" do
+        before { post microposts_path }
+        specify { response.should redirect_to(signin_path)}
+      end
+      describe "submitting to the destroy action" do
+        before do
+          micropost = FactoryGirl.create(:micropost)
+          delete micropost_path(micropost)
+        end
+        specify {response.should redirect_to(signin_path)}
+      end
     end
 
     describe "as wrong user" do
